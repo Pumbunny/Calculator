@@ -36,19 +36,30 @@ public class calculaterServlet extends HttpServlet {
         double number_1 = Double.parseDouble(number1);
         double number_2 = Double.parseDouble(number2);
         String result = "";
-        if (status != null && status.equals("Add")) {
+        
+        if (status != null && status.equals("Add")) 
+        {
             result = String.valueOf(number_1 + number_2);
-        } else if (status != null && status.equals("Sub")) {
+        } 
+        else if (status != null && status.equals("Sub")) 
+        {
             result = String.valueOf(number_1 - number_2);
-        } else if (status != null && status.equals("Mul")) {
+        } 
+        else if (status != null && status.equals("Mul")) 
+        {
             result = String.valueOf(number_1 * number_2);
-        } else if (status != null && status.equals("Div")) {
+        } 
+        else if (status != null && status.equals("Div")) 
+        {
             if (number_2 == 0) {
                 result = "Error devide by 0";
-            }else{
+            }
+            else
+            {
                 result = String.valueOf(number_1 / number_2);
             }
         }
+        
         request.setAttribute("result", result);
         request.getRequestDispatcher("result.jsp").forward(request, response);
         return;
