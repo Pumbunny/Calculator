@@ -12,7 +12,7 @@
         <title>Basic Calculator Page</title>
     </head>
     <body>
-        <form name="mainform" action="calculaterServlet" method="POST">
+        <form name="mainform" action="servletCalculator" method="POST">
             Number 1: <input type="text" name="number1" value="" />
             Number 2: <input type="text" name="number2" value="" />
             <br/><br/>
