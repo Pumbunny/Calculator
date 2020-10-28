@@ -19,15 +19,24 @@
                 String number2 = request.getParameter("number2");
                 String status = request.getParameter("status");
                 String symbol = "";
-                if (status != null && status.equals("Add")) {
+               
+                if (status != null && status.equals("Add")) 
+                {
                     symbol = "+";
-                } else if (status != null && status.equals("Sub")) {
+                } 
+                else if (status != null && status.equals("Sub")) 
+                {
                     symbol = "-";
-                } else if (status != null && status.equals("Mul")) {
+                } 
+                else if (status != null && status.equals("Mul")) 
+                {
                     symbol = "*";
-                } else if (status != null && status.equals("Div")) {
+                } 
+                else if (status != null && status.equals("Div")) 
+                {
                     symbol = "/";
                 }
+                
                 out.print("The result of " + number1  + symbol + number2 + " is: " + result);
             %>
         </h1>
